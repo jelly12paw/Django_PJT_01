@@ -26,5 +26,14 @@ def detail(request, pk):
     context = {
         'title': movie_click.title,
         'content': movie_click.content,
+        'idx' : movie_click.pk,
     }
     return render(request, 'movies/detail.html', context)
+
+def delete(request, pk):
+    Review.objects.get(id=pk).delete()
+
+    return redirect('movies:index')
+
+def edit(request, pk):
+    return render(request, 'movies/edit.html')
