@@ -1,15 +1,25 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <form action="{% url 'movies:create' %}">
-  <div class="mb-3">
-    <label for="title_">제목</label>
-    <input class="form-control" id='title_' name="title_" type="text" aria-label="default input example">
-  </div>
-  <div class="mb-3">
-    <label for="content_" class="form-label">내용</label>
-    <textarea class="form-control" id="content_" name="content_" rows="3"></textarea>
-  </div>
-  <input class="btn btn-primary w-100" type="submit" value="리뷰 쓰기">
+    <div class="mb-3">
+        <label for="title_">제목</label>
+        <input
+            class="form-control"
+            id="title_"
+            name="title_"
+            type="text"
+            aria-label="default input example"
+        />
+    </div>
+    <div class="mb-3">
+        <label for="content_" class="form-label">내용</label>
+        <textarea
+            class="form-control"
+            id="content_"
+            name="content_"
+            rows="3"
+        ></textarea>
+    </div>
+    <input class="btn btn-primary w-100" type="submit" value="리뷰 쓰기" />
 </form>
 {% endblock content %}
